@@ -10,10 +10,9 @@ const TopMovies = () =>{
 
 const Home =() =>{
     const {id} = useParams();
-    console.log(id);
     return(
         <div className="main_home">
-            <NavigationSystem whatPage={id} />
+            <NavigationSystem />
             home
         </div>  
     )

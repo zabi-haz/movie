@@ -4,4 +4,37 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+}
+
+.navigatoin_bar_system {
+  height: 5vh;
+  width: 100%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigatoin_bar_system .ul_title_and_search_and_notifcation {
+  width: 100%;
+  background: pink;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.navigatoin_bar_system .ul_title_and_search_and_notifcation .title .title_link {
+  color: red;
+}
+.navigatoin_bar_system .ulbar {
+  height: 7vh;
+  width: 100%;
+  background: #201F1F;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navigatoin_bar_system .ulbar .ulbar_links .navigation_link {
+  font-family: "Edu NSW ACT Foundation", cursive;
 }/*# sourceMappingURL=style.css.map */
