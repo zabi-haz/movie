@@ -1,38 +1,39 @@
-$black: #201F1F
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&display=swap')
+
+$black: #201f1fbd
 $navigationfont: 'Edu NSW ACT Foundation', cursive
+$red: #E22525
+.loading
+    color: #fff
 *
     margin: 0
     padding: 0
     box-sizing: border-box
     list-style: none
     text-decoration: none
-.navigatoin_bar_system
-    height: 5vh
+.ulbar
+    height: 7vh
+    width: 100%
+    background: $black
+    position: fixed
+    bottom: 0
+    left: 0
+    display: flex
+    justify-content: space-around
+    align-items: center
+    filter: blur(1)
+    .ulbar_links
+        .navigation_links
+            display: flex
+            justify-content: space-around
+            align-items: center
+            flex-direction: column
+            color: $red
+            height: 40px
+            h3
+                font-family: $navigationfont
+                font-size: 13px
+.main_home
+    min-height: 100vh
     width: 100%
     background: #111
-    display: flex
-    align-items: center
-    justify-content: center
-    .ul_title_and_search_and_notifcation
-        width: 100%
-        background: pink
-        display: flex
-        justify-content: start
-        align-items: center
-        .title
-            .title_link
-                color: red
-    .ulbar
-        height: 7vh
-        width: 100%
-        background: $black
-        position: fixed
-        bottom: 0
-        left: 0
-        display: flex
-        justify-content: space-around
-        align-items: center
-        .ulbar_links
-            .navigation_link
-                font-family: $navigationfont
-                

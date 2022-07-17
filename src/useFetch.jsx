@@ -12,9 +12,9 @@ export default function useFetch ( type ,page) {
     const FetchingMovie = async () =>{
         const data = await axios.get(api)
         .then((res)=>{
-            console.log(res)
             setLoading(false)
             setData(res.data.results)
+            console.log(res.data)
         })
         .catch((err)=>{
             setLoading(false);
