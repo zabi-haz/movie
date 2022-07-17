@@ -3,7 +3,18 @@ import { useState } from "react"
 import useFetch from "../../useFetch"
 
 const TopMovies = () =>{
-    useFetch("popular")
+    useFetch("popular" , "2")
 }
 
-export default TopMovies
+const Home =() =>{
+    return(
+        <div className="main_home">
+            home
+        </div>
+    )
+}
+
+
+
+
+export default Home
