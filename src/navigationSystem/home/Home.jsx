@@ -6,6 +6,8 @@ import NavigationSystem from "../NavigationSystem"
 import {Link} from "react-router-dom"
 import {BiSearchAlt} from "react-icons/bi"
 const TopMovies = () =>{
+    //https://image.tmdb.org/t/p
+    //https://api.themoviedb.org/3/movie/550?api_key=28912a9fda87530cbf6787028e6ee294
     const {data , loading , err } = useFetch("popular" , "2");
     if(data){
         return(
