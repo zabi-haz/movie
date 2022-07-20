@@ -5,6 +5,7 @@ import useFetch from "../../useFetch";
 import NavigationSystem from "../NavigationSystem";
 import { Link } from "react-router-dom";
 import { BiSearchAlt } from "react-icons/bi";
+import RandomeMovie from "../../component/RandomeMovie";
 
 const TopMovieTitle = () => {
   return (
@@ -15,7 +16,7 @@ const TopMovieTitle = () => {
 };
 
 const TopMovies = () => {
-  const { data, loading, err } = useFetch("top_rated", "2");
+  const { data, loading, err } = useFetch("top_rated", "1");
   if (data) {
     return (
       <div className="main_top_movie">
@@ -42,6 +43,7 @@ const Home = () => {
   return (
     <div className="main_home">
       <NavigationSystem />
+      <RandomeMovie />
       <TopMovieTitle />
       <TopMovies />
     </div>
