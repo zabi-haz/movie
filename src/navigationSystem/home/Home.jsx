@@ -6,18 +6,19 @@ import NavigationSystem from "../NavigationSystem";
 import { Link } from "react-router-dom";
 import { BiSearchAlt } from "react-icons/bi";
 const TopMovies = () => {
-  //https://image.tmdb.org/t/p
-  //https://api.themoviedb.org/3/movie/550?api_key=28912a9fda87530cbf6787028e6ee294
   const { data, loading, err } = useFetch("top_rated", "2");
   if (data) {
     return (
       <div className="main_top_movie">
         {data.map((singleMovie) => (
-          <div className="mian_single_movie" key={singleMovie.id}>
-            <img
-              src={`https://image.tmdb.org/t/p/w500${singleMovie.poster_path}`}
-              alt=""
-            />
+          <div
+            className="mian_single_movie"
+            style={{
+              backgroundImage: `url("https://image.tmdb.org/t/p/w500${singleMovie.poster_path}")`,
+              backgroundSize: "cover",
+            }}
+            key={singleMovie.id}>
+            <h4 className="rating">{singleMovie.vote_average}</h4>
           </div>
         ))}
       </div>
