@@ -11,6 +11,34 @@
   text-decoration: none;
 }
 
+.topnavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 20px;
+}
+.topnavbar .nav_home_title_link {
+  color: #fc3f3f;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 27%;
+}
+.topnavbar .nav_home_title_link .main_title {
+  color: #fff;
+}
+.topnavbar .nav_home_title_link .main_title span {
+  color: #fc3f3f;
+}
+
 .ulbar {
   height: 7vh;
   width: 100%;
@@ -39,10 +67,10 @@
 .main_home {
   min-height: 100vh;
   width: 100%;
-  background: #111;
+  background: #1D1C1C;
 }
 .main_home .main_top_movie {
-  height: 30vh;
+  max-height: 30vh;
   display: flex;
   overflow-x: auto;
   flex-direction: row;
@@ -55,16 +83,13 @@
   height: 223px;
   min-width: 150px;
   margin-right: 10px;
-}
-.main_home .main_top_movie .mian_single_movie .main_movie_image {
-  min-height: 100%;
-  width: 100%;
-  border-radius: 15px;
+  border-radius: 7px;
 }
 .main_home .main_top_movie .mian_single_movie .rating {
   height: 35px;
   width: 45px;
   font-family: "Edu NSW ACT Foundation", cursive;
+  font-size: 0.8rem;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -75,30 +100,74 @@
 }
 
 .main_top_movie_title_hanlder {
-  height: 50px;
+  height: 70px;
   max-width: 100%;
   display: flex;
   justify-content: start;
   align-items: center;
+  padding-left: 20px;
 }
 .main_top_movie_title_hanlder .top_20_movies {
   font-family: sans-serif;
   font-size: 1.2rem;
   color: #fff;
-  padding: 20px;
 }
 
 .main_random_movie_handler {
-  height: 40vh;
+  height: 45vh;
   width: 100%;
   background: lightblue;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  padding-bottom: 20px;
 }
-.main_random_movie_handler .main_welcome_masseage {
-  font-family: sans-serif;
-  font-size: 1.3rem;
+
+.main_random_movie_controler {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.main_random_movie_controler .random_movie_title {
+  font-size: 1.4rem;
   color: #fff;
-  text-shadow: 0 0 10px #111;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main_random_movie_controler .main_controler_play_and_add_to_list {
+  width: 70%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+}
+.main_random_movie_controler .main_controler_play_and_add_to_list .play_link, .main_random_movie_controler .main_controler_play_and_add_to_list .mian_add_to_list_handler {
+  color: #fff;
+  height: 35px;
+  width: 100px;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-family: sans-serif;
+  margin-right: 10px;
+}
+.main_random_movie_controler .main_controler_play_and_add_to_list .play_link .random_movie_play_text, .main_random_movie_controler .main_controler_play_and_add_to_list .mian_add_to_list_handler .random_movie_play_text {
+  margin-left: 7px;
+}
+.main_random_movie_controler .main_controler_play_and_add_to_list .mian_add_to_list_handler {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_random_movie_controler .main_controler_play_and_add_to_list .mian_add_to_list_handler .add_to_list_test {
+  margin-left: 7px;
 }/*# sourceMappingURL=style.css.map */
