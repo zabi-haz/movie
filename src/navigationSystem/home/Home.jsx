@@ -5,6 +5,15 @@ import useFetch from "../../useFetch";
 import NavigationSystem from "../NavigationSystem";
 import { Link } from "react-router-dom";
 import { BiSearchAlt } from "react-icons/bi";
+
+const TopMovieTitle = () => {
+  return (
+    <div className="main_top_movie_title_hanlder">
+      <h2 className="top_20_movies">Top 20 Movies</h2>
+    </div>
+  );
+};
+
 const TopMovies = () => {
   const { data, loading, err } = useFetch("top_rated", "2");
   if (data) {
@@ -27,19 +36,13 @@ const TopMovies = () => {
     return <h1 className="loading">loading...</h1>;
   }
 };
-const Header = () => {
-  return (
-    <header className="main_header">
-      <TopMovies />
-    </header>
-  );
-};
 
 const Home = () => {
   const { id } = useParams();
   return (
     <div className="main_home">
       <NavigationSystem />
+      <TopMovieTitle />
       <TopMovies />
     </div>
   );
