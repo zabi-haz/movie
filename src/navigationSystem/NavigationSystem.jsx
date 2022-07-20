@@ -11,14 +11,6 @@ export default function NavigationSystem() {
   let { id } = useParams();
   return (
     <>
-      <nav className="topnavbar">
-        <Link className="nav_home_title_link" to="/home">
-          <BiCameraMovie />
-          <div className="main_title">
-            Mo<span>vie</span>
-          </div>
-        </Link>
-      </nav>
       <ul className="ulbar">
         <li className="ulbar_links">
           <Link className="navigation_links home_link" to="/home">

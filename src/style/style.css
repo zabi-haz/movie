@@ -11,6 +11,11 @@
   text-decoration: none;
 }
 
+.mainSpace {
+  height: 100px;
+  width: 100%;
+}
+
 .topnavbar {
   position: fixed;
   top: 0;
@@ -21,6 +26,7 @@
   justify-content: start;
   align-items: center;
   padding-left: 20px;
+  background: #111;
 }
 .topnavbar .nav_home_title_link {
   color: #fc3f3f;
@@ -124,7 +130,7 @@
 }
 
 .main_random_movie_controler {
-  height: 30%;
+  height: 25%;
   width: 100%;
   display: flex;
   justify-content: space-around;

@@ -6,7 +6,7 @@ export default function useFetch(type, page) {
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(null);
   let typeOfmovie = type;
-  let api = `https://api.themoviedb.org/3/movie/${typeOfmovie}?api_key=${API_KEY}&language=en-USpage=${page}`;
+  let api = `https://api.themoviedb.org/3/movie/${typeOfmovie}?api_key=${API_KEY}&language=en-US`;
 
   const FetchingMovie = async () => {
     const data = await axios

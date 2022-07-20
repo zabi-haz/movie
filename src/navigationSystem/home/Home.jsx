@@ -4,19 +4,23 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../useFetch";
 import NavigationSystem from "../NavigationSystem";
 import { Link } from "react-router-dom";
-import { BiSearchAlt } from "react-icons/bi";
+import { BiSearchAlt, BiCameraMovie } from "react-icons/bi";
 import RandomeMovie from "../../component/RandomeMovie";
 
-const TopMovieTitle = () => {
+const Space = () => {
+  return <div className="mainSpace"></div>;
+};
+
+const MovieListingTitle = ({ movieListingName }) => {
   return (
     <div className="main_top_movie_title_hanlder">
-      <h2 className="top_20_movies">Top 20 Movies</h2>
+      <h2 className="top_20_movies">{movieListingName}</h2>
     </div>
   );
 };
 
-const TopMovies = () => {
-  const { data, loading, err } = useFetch("top_rated", "1");
+const MovieListingData = ({ dataType, pageNumber }) => {
+  const { data, loading, err } = useFetch(dataType, pageNumber);
   if (data) {
     return (
       <div className="main_top_movie">
@@ -42,10 +46,23 @@ const Home = () => {
   const { id } = useParams();
   return (
     <div className="main_home">
+      <nav className="topnavbar">
+        <Link className="nav_home_title_link" to="/home">
+          <BiCameraMovie />
+          <div className="main_title">
+            Mo<span>vie</span>
+          </div>
+        </Link>
+      </nav>
       <NavigationSystem />
       <RandomeMovie />
-      <TopMovieTitle />
-      <TopMovies />
+      <MovieListingTitle movieListingName="Top 20 Movies" />
+      <MovieListingData dataType="top_rated" pageNumber="1" />
+      <MovieListingTitle movieListingName="Upcoming" />
+      <MovieListingData dataType="upcoming" pageNumber="1" />{" "}
+      <MovieListingTitle movieListingName="Popular" />
+      <MovieListingData dataType="popular" pageNumber="1" />
+      <Space />
     </div>
   );
 };

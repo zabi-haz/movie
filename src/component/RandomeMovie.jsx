@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { BsFillPlayCircleFill, BsArrowDownCircleFill } from "react-icons/bs";
 import { GrAdd, GrAddCircle } from "react-icons/gr";
 function RandomeMovie() {
-  const [randomMovie, setRandomMovie] = useState(null);
   const { data, loading, err } = useFetch("popular", "1");
   if (data) {
     let randomNumber = Math.floor(Math.random() * data.length);
