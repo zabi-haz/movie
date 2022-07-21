@@ -54,7 +54,6 @@ const Home = () => {
           </div>
         </Link>
       </nav>
-      <NavigationSystem />
       <RandomeMovie />
       <MovieListingTitle movieListingName="Top 20 Movies" />
       <MovieListingData dataType="top_rated" pageNumber="1" />
