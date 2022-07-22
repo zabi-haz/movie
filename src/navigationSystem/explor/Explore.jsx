@@ -10,12 +10,24 @@ const Explor = () => {
     let adding = page + 1;
     setPage(adding);
   };
+  const prevPage = () => {
+    let negative = page - 1;
+    setPage(negative);
+  };
   const { data, loading, err } = useFetch("popular", page);
   if (data) {
-    console.log(data);
     return (
       <>
         <SearchBar />
+        <div className="main_next_prev_page_container">
+          <button className="prev" onClick={() => prevPage()}>
+            prev
+          </button>
+          <h2 className="curren_page">{page}</h2>
+          <button className="next" onClick={() => nextPage()}>
+            next
+          </button>
+        </div>
         <div className="main_explor_handler">
           {data.map((singleMovie) => (
             <div
@@ -28,6 +40,15 @@ const Explor = () => {
               <h4 className="rating">{singleMovie.vote_average}</h4>
             </div>
           ))}
+        </div>
+        <div className="main_next_prev_page_container">
+          <button className="prev" onClick={() => prevPage()}>
+            prev
+          </button>
+          <h2 className="curren_page">{page}</h2>
+          <button className="next" onClick={() => nextPage()}>
+            next
+          </button>
         </div>
         <div className="mainSpace"></div>
       </>
