@@ -3,6 +3,7 @@
 $black: #201f1fbd
 $navigationfont: 'Edu NSW ACT Foundation', cursive
 $red: #e43d3d
+$mainBackground: #15152b6c
 .main_app
     background: #1D1C1C
 ::-webkit-scrollbar
@@ -52,7 +53,7 @@ $red: #e43d3d
     display: flex
     justify-content: space-around
     align-items: center
-    background: #111111ea
+    background: #121229c7
     .ulbar_links
         .navigation_links
             display: flex
@@ -77,7 +78,7 @@ $red: #e43d3d
 .main_home
     min-height: 100vh
     width: 100%
-    background: #1D1C1C
+    background: $mainBackground
     .main_top_movie
         display: flex
         overflow-x: auto
@@ -170,12 +171,12 @@ $red: #e43d3d
 .mian_search_movie_handler
     height: 100px
     width: 100%
-    background: #1D1C1C
     display: flex
     justify-content: space-between
     align-items: center
     flex-direction: row
     padding: 0 20px
+    background: $mainBackground
     input
         width: 80%
         background: #201F25
@@ -200,13 +201,14 @@ $red: #e43d3d
 .main_explor_handler
     min-height: 100vh
     width: 100%
-    background: #1D1C1C
+    background: $mainBackground
     display: grid
     grid-template-columns: repeat(2,1fr)
     grid-template-rows: auto
     justify-items: center
     align-items: center
     grid-gap: 12px
+    padding: 10px
     .singleMovie_explor_image
         height: 270px
         width: 100%
@@ -233,7 +235,7 @@ $red: #e43d3d
     align-items: center
     .curren_page
         color: red
-        text-shadow: 0 0 10px #fff
+        text-shadow: 0 0 3px #fff
     button
         height: 40px
         width: 100px

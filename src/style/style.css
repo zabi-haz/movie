@@ -63,7 +63,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgba(17, 17, 17, 0.9176470588);
+  background: rgba(18, 18, 41, 0.7803921569);
 }
 .ulbar .ulbar_links .navigation_links {
   display: flex;
@@ -89,7 +89,7 @@
 .main_home {
   min-height: 100vh;
   width: 100%;
-  background: #1D1C1C;
+  background: rgba(21, 21, 43, 0.4235294118);
 }
 .main_home .main_top_movie {
   display: flex;
@@ -197,12 +197,12 @@
 .mian_search_movie_handler {
   height: 100px;
   width: 100%;
-  background: #1D1C1C;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   padding: 0 20px;
+  background: rgba(21, 21, 43, 0.4235294118);
 }
 .mian_search_movie_handler input {
   width: 80%;
@@ -232,13 +232,14 @@
 .main_explor_handler {
   min-height: 100vh;
   width: 100%;
-  background: #1D1C1C;
+  background: rgba(21, 21, 43, 0.4235294118);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   justify-items: center;
   align-items: center;
   grid-gap: 12px;
+  padding: 10px;
 }
 .main_explor_handler .singleMovie_explor_image {
   height: 270px;
@@ -270,7 +271,7 @@
 }
 .main_next_prev_page_container .curren_page {
   color: red;
-  text-shadow: 0 0 10px #fff;
+  text-shadow: 0 0 3px #fff;
 }
 .main_next_prev_page_container button {
   height: 40px;

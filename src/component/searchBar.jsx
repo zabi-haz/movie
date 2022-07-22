@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BiSearchAlt } from "react-icons/bi";
 const SearchBar = (props) => {
   let data = props.data;
