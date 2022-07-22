@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&display=swap");
+.main_app {
+  background: #1D1C1C;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -40,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 27%;
+  width: 100px;
 }
 .topnavbar .nav_home_title_link .main_title {
   color: #fff;
@@ -59,7 +63,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgba(17, 17, 17, 0.7137254902);
+  background: rgba(17, 17, 17, 0.9176470588);
 }
 .ulbar .ulbar_links .navigation_links {
   display: flex;
@@ -88,7 +92,6 @@
   background: #1D1C1C;
 }
 .main_home .main_top_movie {
-  max-height: 30vh;
   display: flex;
   overflow-x: auto;
   flex-direction: row;
@@ -189,4 +192,70 @@
 }
 .main_random_movie_controler .main_controler_play_and_add_to_list .mian_add_to_list_handler .add_to_list_test {
   margin-left: 7px;
+}
+
+.mian_search_movie_handler {
+  height: 100px;
+  width: 100%;
+  background: #1D1C1C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 20px;
+}
+.mian_search_movie_handler input {
+  width: 80%;
+  background: #201F25;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  padding: 20px;
+  color: #fff;
+}
+.mian_search_movie_handler input:focus {
+  outline: none;
+}
+.mian_search_movie_handler button {
+  height: 50px;
+  width: auto;
+  padding: 0 10px;
+  color: red;
+  background: rgba(90, 12, 12, 0.4196078431);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.main_explor_handler {
+  min-height: 100vh;
+  width: 100%;
+  background: #1D1C1C;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 12px;
+  padding: 0 40px;
+}
+.main_explor_handler .singleMovie_explor_image {
+  height: 223px;
+  width: 170px;
+  border-radius: 10px;
+}
+.main_explor_handler .singleMovie_explor_image .rating {
+  height: 35px;
+  width: 45px;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-size: 0.8rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  margin: 10px;
+  border-radius: 6px;
 }/*# sourceMappingURL=style.css.map */

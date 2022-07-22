@@ -11,6 +11,7 @@ import Home from "./navigationSystem/home/Home";
 import Explor from "./navigationSystem/explor/Explore";
 import Profile from "./navigationSystem/profile/Profile";
 import Mylist from "./navigationSystem/myList/MyList";
+import "./style/style.css";
 export default function App() {
   return (
     <Router>
