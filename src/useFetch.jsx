@@ -23,5 +23,5 @@ export default function useFetch(type, page) {
   useEffect(() => {
     FetchingMovie();
   }, [api]);
-  return { data, loading, err };
+  return { data };
 }

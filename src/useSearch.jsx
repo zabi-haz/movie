@@ -22,5 +22,5 @@ export default function useSearch(type, data, page) {
   useEffect(() => {
     FetchingSearchData();
   }, [api, page]);
-  return { searchedData, loadingSearchData, error };
+  return { searchedData };
 }

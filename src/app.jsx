@@ -12,6 +12,7 @@ import Explor from "./navigationSystem/explor/Explore";
 import Profile from "./navigationSystem/profile/Profile";
 import Mylist from "./navigationSystem/myList/MyList";
 import "./style/style.css";
+import SearchData from "./navigationSystem/search/SearchData";
 export default function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/explor" element={<Explor />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/mylist" element={<Mylist />} />
+          <Route path="/explor/search" element={<SearchData data={"data"} />} />
         </Routes>
       </div>
     </Router>
