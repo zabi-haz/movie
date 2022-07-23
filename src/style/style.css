@@ -240,12 +240,14 @@
   align-items: center;
   grid-gap: 12px;
   padding: 10px;
+  transition: all 0.5s;
 }
 .main_explor_handler .singleMovie_explor_image {
   height: 270px;
   width: 100%;
   border-radius: 10px;
   align-self: center;
+  transition: all 0.5s;
 }
 .main_explor_handler .singleMovie_explor_image .rating {
   height: 35px;
@@ -273,7 +275,7 @@
   color: red;
   text-shadow: 0 0 3px #fff;
 }
-.main_next_prev_page_container button {
+.main_next_prev_page_container .button {
   height: 40px;
   width: 100px;
   background: #851010;

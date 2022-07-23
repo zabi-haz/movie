@@ -4,17 +4,16 @@ import useFetch from "../../useFetch";
 import useSearch from "../../useSearch";
 import NavigationSystem from "../NavigationSystem";
 import { BiSearchAlt } from "react-icons/bi";
+import { Link } from "react-router-dom";
 const Explor = () => {
   const [page, setPage] = useState(1);
-  const [isSearch, setIsSearch] = useState(false);
   const [searchMovie, setSearchMovie] = useState(null);
-  const { searchedData, loadingSearchData, error } = useSearch("movies", "");
+  const [inputCaptuer, setInputCapture] = useState("");
+  const [finalSearch, setFinalSearch] = useState("");
   const { data, loading, err } = useFetch("popular", page);
+  // checking if the user trying to search
 
   //searching controle
-  const inputSearching = () => {
-    setSearchMovie();
-  };
 
   //page controle
   const nextPage = () => {
@@ -27,15 +26,14 @@ const Explor = () => {
   };
 
   //search bar
-  const SearchBar = (props) => {
-    let data = props.data;
+  const SearchBar = () => {
     return (
       <div className="mian_search_movie_handler">
         <input type="text" placeholder="enter the movie name" />
-        <button onClick={() => setIsSearch(true)}>
+        <Link to="/explor/search" className="button">
           <BiSearchAlt />
           search
-        </button>
+        </Link>
       </div>
     );
   };
@@ -48,19 +46,9 @@ const Explor = () => {
   return (
     <>
       <SearchBar />
-      <div className="main_explor_handler">
-        {searchedData &&
-          searchedData.map((singleMovie) => (
-            <div
-              className="singleMovie_explor_image"
-              style={{
-                backgroundImage: `url("https://image.tmdb.org/t/p/w500${singleMovie.poster_path}")`,
-                backgroundSize: "cover",
-              }}
-              key={singleMovie.id}>
-              <h4 className="rating">{singleMovie.vote_average}</h4>
-            </div>
-          ))}
+      <div
+        className="main_explor_handler"
+        onClick={() => setSearchMovie(false)}>
         {data &&
           data.map((singleMovie) => (
             <div
@@ -86,6 +74,5 @@ const Explor = () => {
       <div className="mainSpace"></div>
     </>
   );
-  return <h1 className="loading">loading...</h1>;
 };
 export default Explor;
