@@ -19,9 +19,9 @@ function RandomeMovie() {
             {data[randomNumber].original_title}
           </h2>
           <div className="main_controler_play_and_add_to_list">
-            <Link className="play_link" to="/home">
+            <Link className="play_link" to={`/explor/${data[randomNumber].id}`}>
               <BsFillPlayCircleFill />
-              <h4 className="random_movie_play_text">Play</h4>
+              <h4 className="random_movie_play_text">Details</h4>
             </Link>
             <div className="mian_add_to_list_handler">
               <BsArrowDownCircleFill style={{ color: "#fff" }} />

@@ -25,15 +25,20 @@ const MovieListingData = ({ dataType, pageNumber }) => {
     return (
       <div className="main_top_movie">
         {data.map((singleMovie) => (
-          <div
-            className="mian_single_movie"
-            style={{
-              backgroundImage: `url("https://image.tmdb.org/t/p/w500${singleMovie.poster_path}")`,
-              backgroundSize: "cover",
-            }}
+          <Link
+            className="singleMovie_explor_image"
+            to={`/explor/${singleMovie.id}`}
             key={singleMovie.id}>
-            <h4 className="rating">{singleMovie.vote_average}</h4>
-          </div>
+            <div
+              className="mian_single_movie"
+              style={{
+                backgroundImage: `url("https://image.tmdb.org/t/p/w500${singleMovie.poster_path}")`,
+                backgroundSize: "cover",
+              }}
+              key={singleMovie.id}>
+              <h4 className="rating">{singleMovie.vote_average}</h4>
+            </div>
+          </Link>
         ))}
       </div>
     );

@@ -13,6 +13,7 @@ import Profile from "./navigationSystem/profile/Profile";
 import Mylist from "./navigationSystem/myList/MyList";
 import "./style/style.css";
 import SearchData from "./navigationSystem/search/SearchData";
+import SingleMovieDetails from "./component/SingleMovieDetails";
 export default function App() {
   return (
     <Router>
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/mylist" element={<Mylist />} />
           <Route path="/explor/search" element={<SearchData data={"data"} />} />
+          <Route path="/explor/:id" element={<SingleMovieDetails />} />
         </Routes>
       </div>
     </Router>
