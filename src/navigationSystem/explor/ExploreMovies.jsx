@@ -4,18 +4,19 @@ export default function ExplorMovies({ data }) {
   return (
     <>
       {data &&
-        data.map((singleMovie) => (
+        data.map((singleTvShow) => (
           <Link
             className="singleMovie_explor_image"
-            to={`/explor/${singleMovie.id}`}>
+            to={`/tv/${singleTvShow.id}`}
+            key={singleTvShow.id}>
             <div
               className="singleMovie_explor_image"
               style={{
-                backgroundImage: `url("https://image.tmdb.org/t/p/w500${singleMovie.poster_path}")`,
+                backgroundImage: `url("https://image.tmdb.org/t/p/w500${singleTvShow.poster_path}")`,
                 backgroundSize: "cover",
               }}
-              key={singleMovie.id}>
-              <h4 className="rating">{singleMovie.vote_average}</h4>
+              key={singleTvShow.id}>
+              <h4 className="rating">{singleTvShow.vote_average}</h4>
             </div>
           </Link>
         ))}

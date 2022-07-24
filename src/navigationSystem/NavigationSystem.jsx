@@ -22,10 +22,10 @@ export default function NavigationSystem() {
       location.pathname === "/explor"
         ? setExplorLink("navigation_links explor_link")
         : setExplorLink("navigation_links");
-      location.pathname === "/mylist"
+      location.pathname === "/tv"
         ? setMyList("navigation_links mylist_link")
         : setMyList("navigation_links");
-      location.pathname === "/profile"
+      location.pathname === "/mylist"
         ? setProfile("navigation_links profile_link")
         : setProfile("navigation_links");
     };
@@ -50,15 +50,15 @@ export default function NavigationSystem() {
           </Link>
         </li>
         <li className="ulbar_links">
-          <Link className={myList_link} to="/mylist">
+          <Link className={myList_link} to="/tv">
             <HiClipboardList />
-            <h3>My List</h3>
+            <h3>Tv Show</h3>
           </Link>
         </li>
         <li className="ulbar_links">
-          <Link className={profile_link} to="/profile">
+          <Link className={profile_link} to="/mylist">
             <CgProfile />
-            <h3>profile</h3>
+            <h3>My List</h3>
           </Link>
         </li>
       </ul>

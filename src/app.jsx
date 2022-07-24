@@ -1,4 +1,3 @@
-import TopMovies from "./navigationSystem/home/Home";
 import NavigationSystem from "./navigationSystem/NavigationSystem";
 import {
   BrowserRouter as Router,
@@ -9,11 +8,12 @@ import {
 import "./style/style.css";
 import Home from "./navigationSystem/home/Home";
 import Explor from "./navigationSystem/explor/Explore";
-import Profile from "./navigationSystem/profile/Profile";
 import Mylist from "./navigationSystem/myList/MyList";
 import "./style/style.css";
 import SearchData from "./navigationSystem/search/SearchData";
 import SingleMovieDetails from "./component/SingleMovieDetails";
+import TvSows from "./navigationSystem/Tv shows/TvSows";
+import SingleTvShowDetails from "./navigationSystem/Tv shows/SingleTvShowDetails";
 export default function App() {
   return (
     <Router>
@@ -23,10 +23,11 @@ export default function App() {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/explor" element={<Explor />} />
-          <Route path="/profile" element={<Profile />} />
           <Route path="/mylist" element={<Mylist />} />
           <Route path="/explor/search" element={<SearchData data={"data"} />} />
           <Route path="/explor/:id" element={<SingleMovieDetails />} />
+          <Route path="/tv" element={<TvSows />} />
+          <Route path="/tv/:id" element={<SingleTvShowDetails />} />
         </Routes>
       </div>
     </Router>

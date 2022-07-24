@@ -1,17 +1,10 @@
 import { useEffect, useState } from "react";
-import SearchBar from "../../component/searchBar";
-import useFetch from "../../useFetch";
-import useSearch from "../../useSearch";
-import NavigationSystem from "../NavigationSystem";
 import { BiSearchAlt } from "react-icons/bi";
-import { Link } from "react-router-dom";
-import SearchData from "../search/SearchData";
 import ExplorMovies from "./ExploreMovies";
-import Controler from "./Controler";
 
 //main_explor_handler
 const Explor = () => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState(null);
   const [page, setPage] = useState(1);
   const [inputturmes, setInputTurmes] = useState("");
   // apis
@@ -43,35 +36,38 @@ const Explor = () => {
       setPage(prev_page);
     }
   };
-
-  return (
-    <>
-      <form className="mian_search_movie_handler" onSubmit={handlerOnSubmit}>
-        <input
-          type="text"
-          placeholder="enter the movie name"
-          value={inputturmes}
-          onChange={(e) => setInputTurmes(e.target.value)}
-        />
-        <button onClick={handlerOnSubmit}>
-          <BiSearchAlt />
-          search
-        </button>
-      </form>
-      <div className="main_explor_handler">
-        <ExplorMovies data={movies} />
-      </div>
-      <div className="main_next_prev_page_container">
-        <h4 className="curren_page">{page}</h4>
-        <button className="button" onClick={prev_page}>
-          prev
-        </button>
-        <button className="button" onClick={next_page}>
-          next
-        </button>
-      </div>
-      <div className="mainSpace"></div>
-    </>
-  );
+  if (!movies) {
+    return <h3 className="loading">loading ...</h3>;
+  } else {
+    return (
+      <>
+        <form className="mian_search_movie_handler" onSubmit={handlerOnSubmit}>
+          <input
+            type="text"
+            placeholder="enter the movie name"
+            value={inputturmes}
+            onChange={(e) => setInputTurmes(e.target.value)}
+          />
+          <button onClick={handlerOnSubmit}>
+            <BiSearchAlt />
+            search
+          </button>
+        </form>
+        <div className="main_explor_handler">
+          <ExplorMovies data={movies} />
+        </div>
+        <div className="main_next_prev_page_container">
+          <h4 className="curren_page">{page}</h4>
+          <button className="button" onClick={prev_page}>
+            prev
+          </button>
+          <button className="button" onClick={next_page}>
+            next
+          </button>
+        </div>
+        <div className="mainSpace"></div>
+      </>
+    );
+  }
 };
 export default Explor;

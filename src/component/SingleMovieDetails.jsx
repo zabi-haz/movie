@@ -47,20 +47,17 @@ const SingleMovieDetails = () => {
               {`>`}
             </p>
             <p className="realeas_date movie_details_information_show_tags">
-              {movieDetails.release_date}
+              {movieDetails.release_date.split("-")[0]}
             </p>
-            <p className="movie_details_status movie_details_information_show_tags">
+            {/* <p className="movie_details_status movie_details_information_show_tags">
               {movieDetails.status}
+            </p> */}
+            <p className="production_countries">
+              {movieDetails.production_countries[0].name}
             </p>
-            {movieDetails.production_countries.map(
-              (singeMovieProductionCountries) => (
-                <p className="production_countries">
-                  {singeMovieProductionCountries.name}
-                </p>
-              )
-            )}
           </div>
           <div className="mian_single_movie_overview">
+            <p className="overviewred">over view :</p>
             <p className="overview">{movieDetails.overview}</p>
           </div>
         </div>
