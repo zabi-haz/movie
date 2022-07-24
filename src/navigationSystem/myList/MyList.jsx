@@ -1,9 +1,3 @@
-import NavigationSystem from "../NavigationSystem";
-
-export default function Mylist(){
-    return(
-        <div>
-            <NavigationSystem />
-            <h2>my list</h2></div>
-    )
+export default function Mylist() {
+  return <div className="mian_my_list_container">my list</div>;
 }
